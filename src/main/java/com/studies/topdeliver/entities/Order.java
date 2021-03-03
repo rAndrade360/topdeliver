@@ -1,6 +1,7 @@
 package com.studies.topdeliver.entities;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.time.Instant;
 import java.util.HashSet;
 import java.util.Objects;
@@ -8,7 +9,8 @@ import java.util.Set;
 
 @Entity
 @Table(name = "tb_order")
-public class Order {
+public class Order implements Serializable {
+    private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

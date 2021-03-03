@@ -13,7 +13,7 @@ public class Product implements Serializable
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private double price;
+    private Double price;
     private String description;
     private String imageUri;
 

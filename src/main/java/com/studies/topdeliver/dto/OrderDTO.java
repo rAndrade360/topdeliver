@@ -2,8 +2,13 @@ package com.studies.topdeliver.dto;
 
 import com.studies.topdeliver.entities.Order;
 import com.studies.topdeliver.entities.OrderStatus;
+import com.studies.topdeliver.entities.Product;
 
 import java.time.Instant;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public class OrderDTO {
     private Long id;
@@ -12,6 +17,8 @@ public class OrderDTO {
     private Double longitude;
     private Instant moment;
     private OrderStatus status;
+
+    private List<ProductDTO> products = new ArrayList<>();
 
     public OrderDTO(){
 
@@ -82,4 +89,10 @@ public class OrderDTO {
     public void setStatus(OrderStatus status) {
         this.status = status;
     }
+
+    public List<ProductDTO> getProducts() {
+        return products;
+    }
+
+
 }

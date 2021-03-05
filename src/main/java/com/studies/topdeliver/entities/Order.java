@@ -1,5 +1,7 @@
 package com.studies.topdeliver.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.Instant;
@@ -9,6 +11,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "tb_order")
+
 public class Order implements Serializable {
     private static final long serialVersionUID = 1L;
 
